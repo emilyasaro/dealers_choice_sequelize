@@ -12,16 +12,18 @@ module.exports = (martialArtists) => html`
 <body>
   <nav>
     <div id='navBar'>
-      <a href="/dojos">Back to Home</a>
+      <a href="/">Back to Home</a>
       <a href="/martialartists">Full Roster</a>
     </div>
   </nav>
+  <div class="text" >
   <h1> The Rivals </h1>
-  <ul style="list-style-type:none">
-<li> ${martialArtists.name} </li>
-<li> Level: ${martialArtists.level} </li>
-<li> Rival: <a href="${martialArtists.rival.id}"> ${martialArtists.rival.name} </a> </li>
-  </ul>
+    <ul style="list-style-type:none">
+      <li> ${martialArtists.name} </li>
+      <li> Level: ${martialArtists.level} </li>
+      <li> Rival: <a href="${martialArtists.rival.id}"> ${martialArtists.rival.name} </a> </li>
+    </ul>
+</div>
 </body>
 </html>
 `

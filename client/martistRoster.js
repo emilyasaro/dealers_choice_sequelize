@@ -12,20 +12,21 @@ module.exports = (roster) => html `
   <header>
     <nav>
     <div id='navBar'>
-      <a href="/dojos">Back to Home</a>
+      <a href="/">Back to Home</a>
       <a href="/martialartists">Full Roster</a>
     </div>
-  </nav>
-</header>
-
-  <h2> The Roster </h2>
-    <ul id="member" style="list-style-type:none">
-    ${roster.map((member) => html `
-    <a href="/martialartists/${member.id}"> ${member.name} </a>:
-      <li> Rank: ${member.level} </li>
-      <li> Member of: ${member.Dojo.name} </li>
-    `)}
-    </ul>
+    </nav>
+  </header>
+  <div class="text">
+    <h2> The Roster </h2>
+      <ul id="member" style="list-style-type:none">
+      ${roster.map((member) => html `
+      <a href="/martialartists/${member.id}"> ${member.name} </a>:
+        <li> Rank: ${member.level} </li>
+        <li> Member of: ${member.Dojo.name} </li>
+      `)}
+      </ul>
+</div>
 </body>
 </html>
 `

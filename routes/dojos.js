@@ -27,7 +27,7 @@ router.get('/', async (req, res, next) => {
 })
 
 
-router.get('/:id', async (req, res, next) => {
+router.get('/dojos/:id', async (req, res, next) => {
   try {
     const dojoStudents = await Dojo.findAll({
       where: {

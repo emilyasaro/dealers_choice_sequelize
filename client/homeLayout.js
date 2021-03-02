@@ -23,7 +23,7 @@ module.exports = (dojoList) =>
     <!-- <div class="column">
       <img src ="homepage_left.jpg">
     </div> -->
-    <div id="text" class ="column">
+    <div class="text" >
       ${dojoList.map((dojo) =>
         html`
           <p> <a href="dojos/${dojo.id}"> ${dojo.name} </a>

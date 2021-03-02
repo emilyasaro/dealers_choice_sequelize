@@ -13,7 +13,7 @@ module.exports = (dojosToJoin) =>
   <header class="header">
     <nav>
     <div id='navBar'>
-      <a href="/dojos">Back to Home</a>
+      <a href="/">Back to Home</a>
       <a href="/martialartists">Full Roster</a>
     </div>
   </nav>
