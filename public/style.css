@@ -1,0 +1,54 @@
+* {
+
+  color: darkgoldenrod;
+}
+header {
+  background-color: darkslategray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px;
+  width: fill;
+  margin: 0; /* was supposed to touch the top */
+  border-radius: 0 0 1em 1em;
+}
+footer {
+  background-color: darkslategray;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px;
+  width: 98%;
+  border-radius: 1em 1em 0 0;
+  position: fixed;
+  bottom: 0;
+}
+
+body  {
+  background-color: black;
+  background-image: url('homepage_left.jpg'),url('homepage_right.jpg');
+  background-repeat: no-repeat, no-repeat;
+  /* background-attachment: fixed;  */
+  background-position: -20% 0%, 120% 0%;
+  background-size: 40%, 40%;
+
+}
+
+#text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em
+}
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em
+}
+/*
+.containter {
+  display: flex;
+   flex-direction: row;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+}
+.column {
+  flex-basis: 33%;
+  justify-content: center;
+} */

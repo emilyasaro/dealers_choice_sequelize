@@ -7,14 +7,14 @@ class MartialArtist extends Model {}
 MartialArtist.init({
   name: {
     type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-    }
+    // allowNull: false,
+    // validate: {
+    //   notEmpty: true
+    // }
   },
   level: {
     type: DataTypes.ENUM("Sensei", "Student"),
-    allowNull: false,
+    // allowNull: false,
     defaultValue: "Student"
   },
 
@@ -54,6 +54,16 @@ MartialArtist.belongsTo(Dojo);
 Dojo.hasMany(MartialArtist, { as: "members" });
 Dojo.hasOne(MartialArtist, { as: "HeadInstructor", foreignKey: "DojoId" });
 
-
+MartialArtist.findRivals = function (id) {
+  return this.findOne({
+    include: {
+      model: MartialArtist,
+      as: 'rival'
+    },
+    where: {
+      id
+    }
+  })
+}
 
 module.exports = { db, MartialArtist, Dojo };

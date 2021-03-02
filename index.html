@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<form method="POST" action="/bookmarks">
+  <input name="name" placeholder="Your Name" />
+  <label for="dojo">Choose a dojo</label>
+    <select id="dojos" name="dojo">
+      ${dojoList.map(
+        (dojo) =>
+          html` <option value="Choose wisely!">
+            ${dojo.name}
+          </option>`
+      )}
+    </select>
+    <button type="submit">Save</button>
+</form>
+
